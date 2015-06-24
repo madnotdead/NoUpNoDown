@@ -17,6 +17,7 @@ package worlds
 		private var movementText:Text = null;
 		private var jumpText:Text = null;
 		private var gravityText:Text = null;
+		private var gravityText2:Text = null;
 		private var titleColorTween:ColorTween = null;
 		
 		public function Instructions() 
@@ -46,7 +47,12 @@ package worlds
 			gravityText = new Text("'g' to change gravity");
 			gravityText.scale = 2	;
 			gravityText.x = (FP.screen.width - gravityText.scaledWidth) / 2;
-			gravityText.y = 300;
+			gravityText.y = 300;	
+			
+			gravityText2 = new Text("[works only if jumping]");
+			gravityText2.scale = 2	;
+			gravityText2.x = (FP.screen.width - gravityText.scaledWidth) / 2;
+			gravityText2.y = 350;
 			
 			pressText = new Text("press space to play");
 			pressText.scale = 2	;
@@ -62,6 +68,7 @@ package worlds
 			addGraphic(movementText);
 			addGraphic(jumpText);
 			addGraphic(gravityText);
+			addGraphic(gravityText2);
 			
 		}
 		
